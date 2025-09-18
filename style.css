@@ -1,0 +1,446 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏样式 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo h2 {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #2563eb;
+}
+
+/* 主要内容区域 */
+main {
+    margin-top: 70px;
+}
+
+/* 英雄区域 */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: white;
+    color: #2563eb;
+}
+
+.btn-primary:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* 通用段落样式 */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #1e293b;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+/* 关于我部分 */
+.about {
+    background: #f8fafc;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #475569;
+    line-height: 1.8;
+}
+
+.about-highlights {
+    list-style: none;
+    margin-top: 40px;
+}
+
+.about-highlights li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.about-highlights li:hover {
+    transform: translateX(10px);
+}
+
+/* 技能部分 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.skill-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.skill-item p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* 项目部分 */
+.projects {
+    background: #f8fafc;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-placeholder {
+    font-size: 4rem;
+    color: white;
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.project-content p {
+    color: #64748b;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    background: #e2e8f0;
+    color: #475569;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* 联系我部分 */
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content > p {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 50px;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.contact-item {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.contact-info p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* 页脚 */
+footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .skills-grid,
+    .projects-grid,
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .skill-item,
+    .contact-item {
+        padding: 30px 20px;
+    }
+    
+    .project-content {
+        padding: 20px;
+    }
+}
