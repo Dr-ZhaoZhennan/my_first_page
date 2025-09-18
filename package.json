@@ -1,0 +1,25 @@
+{
+  "name": "my_first_page",
+  "version": "1.0.0",
+  "description": "简单写一个个人主页，学习一些前端的知识",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dr-ZhaoZhennan/my_first_page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dr-ZhaoZhennan/my_first_page/issues"
+  },
+  "homepage": "https://github.com/Dr-ZhaoZhennan/my_first_page#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

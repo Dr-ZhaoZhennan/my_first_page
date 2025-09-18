@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的简单全栈页面</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>我的简单全栈页面</h1>
+
+    <section class="config">
+      <label>后端 API Base URL：
+        <input id="baseUrl" type="text" placeholder="例如 https://your-tunnel-domain.example" />
+      </label>
+      <button id="saveBaseUrl">保存</button>
+      <small>默认使用当前同源，如部署前端到GitHub Pages，需要将此处设置为你的隧道地址。</small>
+    </section>
+
+    <section class="actions">
+      <button id="btnPing">Ping 后端</button>
+    </section>
+
+    <section class="message-form">
+      <h2>发送一条消息</h2>
+      <form id="msgForm">
+        <input id="msgInput" type="text" placeholder="输入要发送的内容" required />
+        <button type="submit">发送</button>
+      </form>
+    </section>
+
+    <section class="messages">
+      <h2>消息列表</h2>
+      <ul id="msgList"></ul>
+    </section>
+
+    <pre id="log" class="log"></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
